@@ -25,7 +25,26 @@ public class Main {
                             library.addAnime(new Anime(newTitle));
                             break;
                         case 3:
-                            System.out.println("NOT YET IMPLEMENTED");
+                            System.out.print("Rating Title: ");
+                            String rateTitle = scanner.nextLine();
+
+                            Anime animeToRate = library.findBookByTitle(rateTitle);
+                            
+                            if (animeToRate == null) {
+                                System.out.println("Anime not found.");
+                            } else {
+                                System.out.print("Enter rating (1-10): ");
+
+                                if (scanner.hasNextDouble()) {
+                                double rating = scanner.nextDouble();
+                                scanner.nextLine(); // clear newline
+                                animeToRate.setRating(rating);
+                                } else {
+                                    System.out.println("Invalid rating.");
+                                    scanner.next(); // discard bad input
+                                }
+                                library.displayAnime();
+                            }
                             break;
                         case 0:
                             System.out.println("Exting Library...");

@@ -40,6 +40,8 @@ public class Anime {
         if (rating >= 1 && rating <= 10) {
             this.rating = rating;
             System.out.println(this.title + " Rated: " + this.rating);
+        } else {
+            System.out.println("1-10 Only.");
         }
     }
 
