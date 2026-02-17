@@ -23,6 +23,10 @@ public class Main {
                             System.out.print("Please Title: ");
                             String newTitle = scanner.nextLine();
                             library.addAnime(new Anime(newTitle));
+                            break;
+                        case 0:
+                            System.out.println("Exting Library...");
+                            break;
                         default:
                             System.out.println("double invalid");
                     }
@@ -32,7 +36,6 @@ public class Main {
                 scanner.next();
                 continue;
             }
-
             break;
         }
     }
