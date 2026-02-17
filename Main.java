@@ -12,7 +12,7 @@ public class Main {
 
             if (scanner.hasNextInt()) {
                 int choice = scanner.nextInt();
-
+                scanner.nextLine();
                 if ( choice >= 0 && choice <= 3)
                     switch(choice) {
                         case 1:
@@ -20,13 +20,16 @@ public class Main {
                             library.displayAnime();
                             break;
                         case 2:
-                            System.out.print("Please Title: ");
+                            System.out.print("Please Enter Title: ");
                             String newTitle = scanner.nextLine();
                             library.addAnime(new Anime(newTitle));
                             break;
+                        case 3:
+                            System.out.println("NOT YET IMPLEMENTED");
+                            break;
                         case 0:
                             System.out.println("Exting Library...");
-                            break;
+                            return;
                         default:
                             System.out.println("double invalid");
                     }
@@ -36,7 +39,7 @@ public class Main {
                 scanner.next();
                 continue;
             }
-            break;
+        
         }
     }
     public static void printMenu() {
