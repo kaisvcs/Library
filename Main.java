@@ -5,7 +5,7 @@ public class Main {
         Library library = new Library();
         Scanner scanner = new Scanner(System.in);
 
-        library.addAnime( "Your Name");
+        library.addAnime(new Anime("Your Name"));
 
         while (true) {
             printMenu();
@@ -19,6 +19,10 @@ public class Main {
                             System.out.println("choice 1!");
                             library.displayAnime();
                             break;
+                        case 2:
+                            System.out.print("Please Title: ");
+                            String newTitle = scanner.nextLine();
+                            library.addAnime(new Anime(newTitle));
                         default:
                             System.out.println("double invalid");
                     }
@@ -29,7 +33,7 @@ public class Main {
                 continue;
             }
 
-            return;
+            break;
         }
     }
     public static void printMenu() {

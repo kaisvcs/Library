@@ -39,7 +39,7 @@ public class Anime {
     public void setRating(double rating) {
         if (rating >= 1 && rating <= 10) {
             this.rating = rating;
-            System.out.println(this.title + " Rated: " + this.rating)
+            System.out.println(this.title + " Rated: " + this.rating);
         }
     }
 
