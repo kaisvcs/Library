@@ -10,11 +10,13 @@ public class Anime {
         this.title = title;
         this.rating = 0;
     }
+
     public Anime (String title, String japTitle, double rating){
         this.title = title;
         this.japTitle = japTitle;
         this.rating = 0;
     }   
+    
     public Anime (String title, String japTitle, double rating, String studio, int ID, int release){
         this.title = title;
         this.japTitle = japTitle;
